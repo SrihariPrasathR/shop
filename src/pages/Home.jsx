@@ -17,10 +17,11 @@ function Home({ addToCart }) {
         {products.map(product => (
           <div key={product.id} className="border rounded shadow hover:shadow-lg p-4 flex flex-col">
             <img
-              src={product.image}
-              alt={product.name}
-              className="h-40 w-full object-cover mb-4 rounded"
-            />
+  src={process.env.PUBLIC_URL + product.image}
+  alt={product.name}
+  className="h-40 w-full object-cover mb-4 rounded"
+/>
+
             <h2 className="text-xl font-semibold mb-2">{product.name}</h2>
             <p className="text-green-700 font-bold mb-4">${product.price.toFixed(2)}</p>
             <button
